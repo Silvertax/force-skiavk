@@ -1,0 +1,26 @@
+#!/sbin/sh
+# Installer entry point for Magisk. KernelSU installs modules without it.
+
+umask 022
+# Used by Magisk's util_functions.sh
+# shellcheck disable=SC2034
+OUTFD=$2
+# shellcheck disable=SC2034
+ZIPFILE=$3
+
+ui_print() { echo "$1"; }
+
+mount /data 2>/dev/null
+if [ ! -f /data/adb/magisk/util_functions.sh ]; then
+  ui_print "! Install this module with KernelSU or Magisk v20.4+"
+  exit 1
+fi
+# shellcheck disable=SC1091
+. /data/adb/magisk/util_functions.sh
+if [ "$MAGISK_VER_CODE" -lt 20400 ]; then
+  ui_print "! Magisk v20.4+ is required"
+  exit 1
+fi
+
+install_module
+exit 0

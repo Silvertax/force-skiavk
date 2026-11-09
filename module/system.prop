@@ -1,0 +1,2 @@
+# Draw the user interface (HWUI) with Skia's Vulkan backend instead of OpenGL ES
+debug.hwui.renderer=skiavk

@@ -1,0 +1,6 @@
+id=force_skiavk
+name=Force skiavk
+version=v1.0
+versionCode=1
+author=Silvertax
+description=Draws the Android UI with Vulkan instead of OpenGL ES (debug.hwui.renderer=skiavk). Can fix rendering glitches such as a garbled fingerprint animation.
