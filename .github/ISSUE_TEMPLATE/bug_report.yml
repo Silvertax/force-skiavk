@@ -1,0 +1,45 @@
+name: Bug report
+description: Something looks wrong, crashes or does not boot with the module
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Module version
+      description: Shown in KernelSU / Magisk, e.g. v1.0
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device and ROM
+      description: Model, chipset if you know it, ROM name and version, Android version
+      placeholder: SM-G780G (Snapdragon 865), LineageOS 24.0 (unofficial), Android 17
+    validations:
+      required: true
+  - type: dropdown
+    id: root
+    attributes:
+      label: Root solution
+      options:
+        - KernelSU
+        - KernelSU Next
+        - Magisk
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happens, and what did you expect?
+      description: Which app or screen, and whether it also happens without the module. Screenshots help.
+    validations:
+      required: true
+  - type: textarea
+    id: state
+    attributes:
+      label: Renderer state
+      description: "Output of: su -c 'getprop debug.hwui.renderer; dumpsys gfxinfo com.android.systemui | grep Pipeline'"
+      render: text
+    validations:
+      required: true
