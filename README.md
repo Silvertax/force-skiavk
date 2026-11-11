@@ -22,10 +22,10 @@ This is a workaround, not a guaranteed fix: whether it helps depends on the devi
 
 ## Installation
 
-1. Download `force-skiavk-v1.0.zip` from [Releases](https://github.com/Silvertax/force-skiavk/releases/latest).
+1. Download the latest `force-skiavk-*.zip` from [Releases](https://github.com/Silvertax/force-skiavk/releases/latest).
 2. KernelSU / Magisk → Modules → Install → select the zip → reboot.
 
-Later versions can be installed from the module list in KernelSU / Magisk: the module carries an update link (`updateJson`), so the manager offers an update when a new release is out. This works from the first version after v1.0.
+Later versions can be installed from the module list in KernelSU / Magisk: the module carries an update link (`updateJson`), so the manager offers an update when a new release is out. This works from v1.1 on.
 
 ## Checking that it's active
 
