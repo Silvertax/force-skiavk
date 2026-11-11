@@ -25,6 +25,8 @@ This is a workaround, not a guaranteed fix: whether it helps depends on the devi
 1. Download `force-skiavk-v1.0.zip` from [Releases](https://github.com/Silvertax/force-skiavk/releases/latest).
 2. KernelSU / Magisk → Modules → Install → select the zip → reboot.
 
+Later versions can be installed from the module list in KernelSU / Magisk: the module carries an update link (`updateJson`), so the manager offers an update when a new release is out. This works from the first version after v1.0.
+
 ## Checking that it's active
 
 With `adb shell` or in a root shell:
@@ -52,6 +54,8 @@ Only the regular interface drawing changes. Games and apps that use OpenGL ES or
 ## Building
 
 `./build.sh` packs `module/` and the license into `dist/force-skiavk-<version>.zip`.
+
+**Releases:** set `version` and `versionCode` in `module/module.prop`, add the changes to `CHANGELOG.md`, merge, then publish a GitHub release whose tag equals `version`. The workflow in `.github/workflows/build.yml` builds the zip, attaches it to the release and updates `update.json`.
 
 ## License
 
