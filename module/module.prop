@@ -1,7 +1,7 @@
 id=force_skiavk
 name=Force skiavk
-version=v1.0
-versionCode=1
+version=v1.1
+versionCode=2
 updateJson=https://raw.githubusercontent.com/Silvertax/force-skiavk/main/update.json
 author=Silvertax
 description=Draws the Android UI with Vulkan instead of OpenGL ES (debug.hwui.renderer=skiavk). Can fix rendering glitches such as a garbled fingerprint animation.
